@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <main>
+    <h1>Sever</h1>
+    <section>
+      <h3>How to pawn</h3>
+      <pre>
+        // spawn(fn -> 1 + 2 end)
+        spawn(() => 1 + 2)
+      </pre>
+    </section>
+
+    <section>
+      <h3>Get process id</h3>
+      <pre>
+        // pid = spawn(fn -> 1 + 2 end)
+        const id = spawn(() => 1 + 2)
+      </pre>
+    </section>
+
+    <section>
+      <h3>Check if process is alive</h3>
+      <pre>
+        // alive?(id)
+        alive(id)
+      </pre>
+    </section>
+
+    <section>
+      <h3>Use process id</h3>
+      <pre>
+          // spawn(fn -> self() == 1 end)
+          spawn(() => me() === 1)
+        </pre>
+    </section>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
