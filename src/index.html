@@ -5,44 +5,46 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/javascript.min.js"></script>
   <title>Vite App</title>
 </head>
 
 <body>
   <main>
     <h1>Sever</h1>
+    <p>Sever aims to create an Elixir like API to spawn and manage processes in JavaScript</p>
     <section>
-      <h3>How to pawn</h3>
-      <pre>
-        // spawn(fn -> 1 + 2 end)
-        spawn(() => 1 + 2)
+      <h3>Spawn a process</h3>
+      <pre><code class="language-javascript">// spawn(fn -> 1 + 2 end)
+spawn(() => 1 + 2)</code>
       </pre>
     </section>
 
     <section>
       <h3>Get process id</h3>
-      <pre>
-        // pid = spawn(fn -> 1 + 2 end)
-        const id = spawn(() => 1 + 2)
+      <pre><code class="language-javascript">// pid = spawn(fn -> 1 + 2 end)
+const id = spawn(() => 1 + 2)</code>
       </pre>
     </section>
 
     <section>
       <h3>Check if process is alive</h3>
-      <pre>
-        // alive?(id)
-        alive(id)
+      <pre><code class="language-javascript">// alive?(id)
+alive(id)</code>
       </pre>
     </section>
 
     <section>
       <h3>Use process id</h3>
-      <pre>
-          // spawn(fn -> self() == 1 end)
-          spawn(() => me() === 1)
-        </pre>
+      <pre><code class="language-javascript">// spawn(fn -> self() == 1 end)
+spawn(() => me() === 1)</code>
+      </pre>
     </section>
   </main>
+  <script>hljs.highlightAll();</script>
   <script type="module" src="main.js"></script>
 </body>
 
