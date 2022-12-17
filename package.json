@@ -2,6 +2,10 @@
   "name": "sever",
   "private": true,
   "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/sever.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
