@@ -1,6 +1,8 @@
-# Sever
+# Sever Membrane
 
-Sever aims to create an Elixir like API to spawn and manage processes in JavaScript.
+Sever Membrane aims to create an Elixir like API to spawn and manage processes in JavaScript.
+
+> Sever Membrane works on Browsers only.
 
 ## Install
 
@@ -10,9 +12,8 @@ npm install sever
 
 ## Usage
 
-Note: Sever works on Browsers only.
 
-```
+```js
 import { spawn, alive, me } from "sever"
 ```
 
