@@ -9,7 +9,7 @@ export default defineConfig({
         sourcemap: true,
         lib: {
             entry: resolve(__dirname, 'lib/index.js'),
-            name: 'Sever Membrane',
+            name: 'Sever',
             formats: ['iife', 'es'],
             fileName: (format) => {
                 if (format === 'es') {
