@@ -1,5 +1,5 @@
 import "./style.css"
-import { spawn, alive } from "../lib"
+import { spawn, alive, receive, send, me } from "../lib"
 
 let id = spawn((max) => {
     const primeNumbers = []
@@ -23,3 +23,11 @@ spawn(() => { })
 id = spawn(() => me() === 1)
 
 console.log(alive(id))
+
+id = spawn(() => {
+    receive((data) => {
+        console.log(me(), "received", data)
+    })
+})
+
+send(id, "hello")

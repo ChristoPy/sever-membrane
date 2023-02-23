@@ -48,3 +48,16 @@ if (alive(id)) {
   // do somenthing...
 }
 ```
+
+## Send message to a process
+```js
+// pid = spawn(fn -> receive do msg -> IO.puts "Received: #{msg}" end end)
+const id id = spawn(() => {
+    receive((data) => {
+        console.log(me(), "received", data)
+    })
+})
+
+send(id, "hello")
+// send(pid, "hello")
+```

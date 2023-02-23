@@ -43,6 +43,16 @@ alive(id)</code>
 spawn(() => me() === 1)</code>
       </pre>
     </section>
+    <section>
+      <h3>Send message to service</h3>
+      <pre><code class="language-javascript">// pid = spawn(fn -> receive do msg -> IO.puts "Received: #{msg}" end end)
+const id = spawn(() => receive((msg) => console.log(`Received: ${msg}`)))
+
+send(id, 'Hello')
+// Received: Hello
+</code>
+      </pre>
+    </section>
   </main>
   <script>hljs.highlightAll();</script>
   <script type="module" src="./main.js"></script>
