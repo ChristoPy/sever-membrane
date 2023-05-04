@@ -3,9 +3,9 @@ declare module "sever-membrane" {
   type ProcessFunctionMessage = { type: string, data?: any };
   type ProcessFunction = (message: ProcessFunctionMessage) => any;
 
-  function spawn(fn: ProcessFunction): ProcessId;
+  function spawn(code: ProcessFunction, ...params: any[]): ProcessId;
   function alive(id: ProcessId): boolean;
-  function me(): ProcessId;
-  function send(id: ProcessId, message: ProcessFunctionMessage): void;
-  function receive(callback: ProcessFunction): void;
+  function me(): string;
+  function send(id: ProcessId, data: ProcessFunctionMessage): void;
+  function receive(callback: (message: ProcessFunctionMessage) => any): void;
 }
