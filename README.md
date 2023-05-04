@@ -14,7 +14,7 @@ npm install sever
 
 
 ```js
-import { spawn, alive, me } from "sever"
+import { spawn, alive, me } from "sever-membrane"
 ```
 
 ## Spawn a process

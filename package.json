@@ -1,9 +1,11 @@
 {
   "name": "sever-membrane",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "files": [
-    "dist"
+    "dist",
+    "types.d.ts"
   ],
+  "typings": "types.d.ts",
   "main": "dist/sever.js",
   "scripts": {
     "dev": "vite",
