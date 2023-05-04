@@ -6,6 +6,6 @@ declare module "sever-membrane" {
   function spawn(code: ProcessFunction, ...params: any[]): ProcessId;
   function alive(id: ProcessId): boolean;
   function me(): string;
-  function send(id: ProcessId, data: ProcessFunctionMessage): void;
+  function send(id: ProcessId, data: ProcessFunctionMessage | any): void;
   function receive(callback: (message: ProcessFunctionMessage) => any): void;
 }

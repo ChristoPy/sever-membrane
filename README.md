@@ -7,7 +7,7 @@ Sever Membrane aims to create an Elixir like API to spawn and manage processes i
 ## Install
 
 ```shell
-npm install sever
+npm install sever-membrane
 ```
 
 ## Usage
@@ -53,9 +53,9 @@ if (alive(id)) {
 ```js
 // pid = spawn(fn -> receive do msg -> IO.puts "Received: #{msg}" end end)
 const id id = spawn(() => {
-    receive((data) => {
-        console.log(me(), "received", data)
-    })
+  receive((data) => {
+    console.log(me(), "received", data)
+  })
 })
 
 send(id, "hello")
